@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset=xmlns:th="http://www.thymeleaf.org""UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Students List</title>
+</head>
+<body>
+<form>
+    <label for="firstName">First Name</label>
+    <input id="firstName" name="firstName" th:value="${student.firstName}">
+    <br>
+    <label for="lastName">Last Name</label>
+    <input id="lastName" name="lastName" th:value="${student.lastName}">
+    <br>
+    <button type="submit">Save</button>
+
+
+</form>
+</body>
+</html>

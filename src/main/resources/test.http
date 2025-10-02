@@ -1,0 +1,10 @@
+PUT localhost:8080/student/2
+Content-Type: application/json
+{
+  "firstName":	"Lalisa",
+  "lastName":	"juraev",
+  "email":	"laslisa@gmail.com",
+  "gender":	"FEMALE",
+  "birthDate":	"16.09.23",
+  "password":	"4334"
+}
