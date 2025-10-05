@@ -2,6 +2,7 @@ package G50.pdp.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -14,6 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
     @Bean
@@ -42,22 +44,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-//    @Bean
-//    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-//        String encoder1 = passwordEncoder.encode("123");
-//        String encoder2 = passwordEncoder.encode("0926");
-//
-//        UserDetails user = User.builder()
-//                .password(encoder1)
-//                .username("user")
-//                .build();
-//        UserDetails admin = User.builder()
-//                .password(encoder2)
-//                .username("admin")
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(user, admin);
-//    }
 
      @Bean
     public PasswordEncoder passwordEncoder() {
